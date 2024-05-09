@@ -49,6 +49,8 @@ class GradientContainer extends StatelessWidget {
   //final Color colorOne;
   //final Color colorTwo;
 
+  void rollDice() {}
+
   @override
   Widget build(context) {
     return Container(
@@ -60,9 +62,26 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Image.asset(
-          "assets/images/dice-1.png",
-          width: 200,
+        child: Column(
+          children: [
+            Image.asset(
+              "assets/images/dice-1.png",
+              width: 200,
+            ),
+
+            // Three different Button types in the flutter
+            //ElevatedButton(onPressed: onPressed, child: child)
+            //OutlinedButton(onPressed: onPressed, child: child)
+            //TextButton(onPressed: onPressed, child: child)
+            // We will use the Textbutton for this example
+
+            TextButton(
+              // example of an anynymous function call in flutter
+              //onPressed: (){},
+              onPressed: rollDice,
+              child: const Text("Roll Dice"),
+            ),
+          ],
         ),
       ),
     );
